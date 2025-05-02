@@ -28,6 +28,12 @@ const HeroSection = () => {
     slidesToScroll: 1,
   };
 
+  const handleSearch = () => {
+    if (searchText.trim() !== "") {
+      navigate(`/search/${searchText}`);
+    }
+  };
+
   return (
     <div className="flex flex-col md:flex-row max-w-7xl mx-auto md:p-10 rounded-lg items-center justify-center m-4 gap-20">
       <div className="flex flex-col gap-10 md:w-[50%]">
@@ -45,11 +51,16 @@ const HeroSection = () => {
             value={searchText}
             placeholder="Search restaurant by name, city & country"
             onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleSearch();
+              }
+            }}
             className="pl-10 shadow-lg"
           />
           <Search className="text-gray-500 absolute inset-y-2 left-2" />
           <Button
-            onClick={() => navigate(`/search/${searchText}`)}
+            onClick={handleSearch}
             className="bg-orange hover:bg-hoverOrange"
           >
             Search
