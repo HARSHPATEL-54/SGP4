@@ -22,12 +22,14 @@ import {
   useState,
 } from "react";
 
+type MenuWithId = MenuFormSchema & { _id: string };
+
 const EditMenu = ({
   selectedMenu,
   editOpen,
   setEditOpen,
 }: {
-  selectedMenu: MenuFormSchema;
+  selectedMenu: MenuWithId;
   editOpen: boolean;
   setEditOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
