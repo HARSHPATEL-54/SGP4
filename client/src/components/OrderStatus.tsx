@@ -13,7 +13,7 @@ import { Badge } from './ui/badge';
 const statusConfig = {
   pending: { color: 'bg-yellow-500', icon: Clock, text: 'Pending', description: 'Your order is being processed.' },
   confirmed: { color: 'bg-blue-500', icon: CheckCircle, text: 'Confirmed', description: 'Your order has been confirmed.' },
-  preparing: { color: 'bg-orange-500', icon: CookingPot, text: 'Preparing', description: 'Your food is being prepared.' },
+  preparing: { color: 'bg-violet-500', icon: CookingPot, text: 'Preparing', description: 'Your food is being prepared.' },
   outfordelivery: { color: 'bg-purple-500', icon: Truck, text: 'Out For Delivery', description: 'Your food is on the way!' },
   delivered: { color: 'bg-green-500', icon: Package, text: 'Delivered', description: 'Your order has been delivered.' },
   cancelled: { color: 'bg-red-500', icon: AlertCircle, text: 'Cancelled', description: 'Your order has been cancelled.' }
